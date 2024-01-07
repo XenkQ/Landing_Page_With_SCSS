@@ -1,0 +1,79 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+//colors
+$deafult-headers: #4D4D4D;
+$small-text: #717171;
+$green: #4CAF4F;
+$silver-background: #F5F7FA;
+$footer-background: #263238;
+
+//wszystko
+*{
+    font-family: Inter, sans-serif;
+}
+
+//buttons
+@mixin button-with-background($bg-color, $font-color)
+{
+    background-color: $bg-color;
+    color:$font-color;
+    border: 0;
+    border-radius: 5px;
+}
+
+@mixin button-without-background($font-color)
+{
+    background-color: transparent;
+    color:$font-color;
+    border: 0;
+    border-radius: 5px;
+}
+
+//Navigation
+.nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: $silver-background;
+
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+
+        img{
+            width: 50px;
+            height: 30px;
+            float: left;
+        }
+
+        p{
+            font-size: 2em;
+            font-weight: bolder;
+            float: left;
+        }
+    }
+
+    .nav-anchors > ul{
+        list-style: none;
+        display: flex;
+        gap: 4em;
+
+        li{
+            padding: 10px;
+            font-weight: bolder;
+        }
+    }
+
+    .nav-buttons{
+        .login-button{
+            @include button-with-background($green, white);
+        }
+
+        .sign-up-button{
+            @include button-without-background($green);
+        }
+    }
+}
