@@ -4,6 +4,7 @@
 //============colors============
 $deafult-headers: #4D4D4D;
 $small-text: #717171;
+$small-text-less-important: #89939E;
 $green: #4CAF4F;
 $silver-background: #F5F7FA;
 $footer-background: #263238;
@@ -82,6 +83,11 @@ h2
 h3{
     font-size: 2.3rem;
     line-height: 2.5rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    line-height: 2.1rem;
 }
 
 //other
@@ -304,5 +310,78 @@ h3{
         p{
             margin-top: 5px;
         }
+    }
+}
+
+//=====Customers Comments======
+.customer-comments-container
+{
+    @include flex-center();
+    background-color: $silver-background;
+    gap: 50px;
+    margin-top: 50px;
+    padding-top: 25px;
+
+    .customer-comments-graphic{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .customer-comments-content
+    {
+        flex: 0.6;
+
+        h4{
+            margin-top: 20px;
+        }
+
+        p{
+            color: $small-text-less-important;
+        }
+
+        .customer-comments-logos
+        {
+            ul{
+                list-style: none;
+                display: flex;
+                gap: 4em;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.meet-customers-button
+{
+    @include button-without-background($green);
+    @include flex-center();
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+//============Demo============
+.demo-container
+{
+    @include flex-center();
+    background-color: $silver-background;
+    padding-top: 25px;
+    flex-direction: column;
+    
+    p{
+        color: $footer-background;
+        font-size: 4em;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .demo-button
+    {
+        @include button-with-background($green, white);
+        @include flex-center();
+        gap: 10px;
+        padding: 15px 35px;
+        margin-top: 20px;
     }
 }
