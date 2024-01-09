@@ -3,6 +3,16 @@
   font-family: Inter, sans-serif;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+.submit-button {
+  background: transparent;
+  border: 0;
+  color: white;
+}
+
 p {
   color: #717171;
   font-size: 1.2rem;
@@ -11,6 +21,28 @@ p {
 
 .greenText {
   color: green;
+}
+
+.whiteText {
+  color: white;
+}
+
+a {
+  cursor: pointer;
+}
+
+.circle-social {
+  height: 41px;
+  width: 41px;
+  background-color: #3B464C;
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+}
+.circle-social svg {
+  position: relative;
+  left: 20%;
+  top: 20%;
 }
 
 h1, h2, h3 {
@@ -41,6 +73,30 @@ h4 {
   opacity: 0.4;
 }
 
+input[type=email] {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #3B464C;
+  color: white;
+}
+
+.company-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.company-logo img {
+  width: 50px;
+  height: 30px;
+  float: left;
+}
+.company-logo p {
+  font-size: 2.1em;
+  font-weight: bolder;
+  float: left;
+}
+
 .nav-container {
   display: flex;
   justify-content: center;
@@ -48,21 +104,6 @@ h4 {
   gap: 13vw;
   padding: 2vh 0;
   background-color: #F5F7FA;
-}
-.nav-container .nav-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav-container .nav-logo img {
-  width: 50px;
-  height: 30px;
-  float: left;
-}
-.nav-container .nav-logo p {
-  font-size: 2em;
-  font-weight: bolder;
-  float: left;
 }
 .nav-container .nav-anchors > ul {
   list-style: none;
@@ -136,7 +177,7 @@ h4 {
   flex-direction: column;
   margin-top: 80px;
 }
-.clients-container .clients-brand-images ul {
+.clients-container .clients-brand-images {
   list-style: none;
   display: flex;
   gap: 10vw;
@@ -172,11 +213,11 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 8px rgba(171, 190, 209, 0.3882352941);
   flex-direction: column;
   text-align: center;
   width: 18vw;
   padding: 10px;
-  box-shadow: 0 0 8px rgba(171, 190, 209, 0.3882352941);
   border-radius: 10px;
 }
 .community-card img {
@@ -218,7 +259,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   background-color: #F5F7FA;
   gap: 20rem;
   padding: 100px 0;
@@ -249,7 +290,7 @@ h4 {
   background-color: #F5F7FA;
   gap: 50px;
   margin-top: 50px;
-  padding-top: 25px;
+  padding: 25px 0;
 }
 .customer-comments-container .customer-comments-graphic {
   display: flex;
@@ -265,7 +306,7 @@ h4 {
 .customer-comments-container .customer-comments-content p {
   color: #89939E;
 }
-.customer-comments-container .customer-comments-content .customer-comments-logos ul {
+.customer-comments-container .customer-comments-content .customer-comments-logos {
   list-style: none;
   display: flex;
   gap: 4em;
@@ -283,6 +324,70 @@ h4 {
   font-size: 1.2em;
   font-weight: bolder;
   padding: 10px;
+  gap: 10px;
+}
+
+.posts-container {
+  margin-top: 65px;
+}
+.posts-container .posts-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.posts-container .posts-container-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.posts-container .posts-container-text p {
+  width: 38vw;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.post .post-content {
+  box-shadow: 0 0 8px rgba(171, 190, 209, 0.3882352941);
+  text-align: center;
+  width: 19em;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1;
+  top: -110px;
+  position: relative;
+}
+.post .post-content p {
+  font-weight: bolder;
+  height: 90px;
+}
+
+.readmore-button {
+  background-color: transparent;
+  color: #4CAF4F;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  gap: 10px;
+  padding: 5px 35px;
+  margin-top: 20px;
+  width: 100%;
+}
+.readmore-button p {
+  align-self: flex-end;
 }
 
 .demo-container {
@@ -290,7 +395,7 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #F5F7FA;
-  padding-top: 25px;
+  padding: 25px 0;
   flex-direction: column;
 }
 .demo-container p {
@@ -310,4 +415,45 @@ h4 {
   gap: 10px;
   padding: 15px 35px;
   margin-top: 20px;
+}
+
+.footer-container {
+  background-color: #263238;
+  display: flex;
+  gap: 50px;
+  padding: 50px 0;
+}
+.footer-container .footer-company-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+}
+.footer-container .footer-company-info .company-copyright p {
+  color: white;
+}
+.footer-container .footer-company-info .company-social {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.footer-container .footer-company-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .footer-company-links a {
+  color: white;
+}
+.footer-container .footer-mail-form {
+  flex: 1;
+}
+.footer-container .footer-mail-form form h4 {
+  margin-bottom: 20px;
+}
+.footer-container .footer-mail-form form .submit-button {
+  position: relative;
+  left: -35px;
+  top: 5px;
 }/*# sourceMappingURL=main.css.map */
