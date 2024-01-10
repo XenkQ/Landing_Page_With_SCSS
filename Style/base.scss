@@ -1,0 +1,67 @@
+//=========ExternalSCSS==========
+$deafult-headers: #4D4D4D;
+$small-text: #717171;
+$small-text-less-important: #89939E;
+$green: #4CAF4F;
+$silver-background: #F5F7FA;
+$footer-background: #263238;
+$social-background: #3B464C;
+
+//==========All============
+*{
+    font-family: Inter, sans-serif;
+}
+
+//==========Buttons============
+button:hover{
+    cursor: pointer;
+}
+
+//============Text============
+p{
+    color: $small-text;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+//links
+a{
+    cursor: pointer;
+}
+
+//============Headers============
+h1, h2, h3{
+    color: $deafult-headers;
+    line-height: 6rem;
+}
+
+h1
+{
+    font-size: 5rem;
+}
+
+h2
+{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+h3{
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+}
+
+//==========Forms============
+input[type="email"]
+{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: $social-background;
+    color: white;
+}

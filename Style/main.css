@@ -7,42 +7,14 @@ button:hover {
   cursor: pointer;
 }
 
-.submit-button {
-  background: transparent;
-  border: 0;
-  color: white;
-}
-
 p {
   color: #717171;
   font-size: 1.2rem;
   margin-top: 15px;
 }
 
-.greenText {
-  color: green;
-}
-
-.whiteText {
-  color: white;
-}
-
 a {
   cursor: pointer;
-}
-
-.circle-social {
-  height: 41px;
-  width: 41px;
-  background-color: #3B464C;
-  border-radius: 50%;
-  display: inline-block;
-  color: white;
-}
-.circle-social svg {
-  position: relative;
-  left: 20%;
-  top: 20%;
 }
 
 h1, h2, h3 {
@@ -69,10 +41,6 @@ h4 {
   line-height: 2.1rem;
 }
 
-.inactive {
-  opacity: 0.4;
-}
-
 input[type=email] {
   border: none;
   border-radius: 5px;
@@ -81,9 +49,41 @@ input[type=email] {
   color: white;
 }
 
+.submit-button {
+  background: transparent;
+  border: 0;
+  color: white;
+}
+
+.greenText {
+  color: green;
+}
+
+.whiteText {
+  color: white;
+}
+
+.circle-social {
+  height: 41px;
+  width: 41px;
+  background-color: #3B464C;
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+}
+.circle-social svg {
+  position: relative;
+  left: 20%;
+  top: 20%;
+}
+
+.inactive {
+  opacity: 0.4;
+}
+
 .company-logo {
   display: flex;
-  align-items: baseline;
+  align-items: colorsline;
   gap: 5px;
 }
 .company-logo img {

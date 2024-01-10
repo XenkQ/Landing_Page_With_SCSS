@@ -1,0 +1,40 @@
+//============Buttons============
+//normal buttons
+@mixin button-with-background($bg-color, $font-color)
+{
+    background-color: $bg-color;
+    color: $font-color;
+    border: 0;
+    border-radius: 5px;
+}
+
+@mixin button-without-background($font-color)
+{
+    background-color: transparent;
+    color: $font-color;
+    border: 0;
+    border-radius: 5px;
+}
+
+//circle buttons
+@mixin circle($radius, $color){
+    height: $radius;
+    width: $radius;
+    background-color: $color;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+//===========Position===========
+@mixin flex-center()
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//===========Shadow===========
+@mixin cardlike-shadow($spread)
+{
+    box-shadow: 0 0 $spread #abbed163;
+}

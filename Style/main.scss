@@ -1,50 +1,9 @@
+//=========ExternalSCSS==========
+@use 'style-maxins';
+@use 'base';
+
 //============Fonts============
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-//============colors============
-$deafult-headers: #4D4D4D;
-$small-text: #717171;
-$small-text-less-important: #89939E;
-$green: #4CAF4F;
-$silver-background: #F5F7FA;
-$footer-background: #263238;
-$social-background: #3B464C;
-
-//==========All============
-*{
-    font-family: Inter, sans-serif;
-}
-
-//==========Buttons============
-button:hover{
-    cursor: pointer;
-}
-
-//normal buttons
-@mixin button-with-background($bg-color, $font-color)
-{
-    background-color: $bg-color;
-    color:$font-color;
-    border: 0;
-    border-radius: 5px;
-}
-
-@mixin button-without-background($font-color)
-{
-    background-color: transparent;
-    color:$font-color;
-    border: 0;
-    border-radius: 5px;
-}
-
-//circle buttons
-@mixin circle($radius, $color){
-    height: $radius;
-    width: $radius;
-    background-color: $color;
-    border-radius: 50%;
-    display: inline-block;
-}
 
 //submit button
 .submit-button
@@ -54,28 +13,7 @@ button:hover{
     color: white;
 }
 
-
-//===========Position===========
-@mixin flex-center()
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-//===========Shadow===========
-@mixin cardlike-shadow($spread)
-{
-    box-shadow: 0 0 $spread #abbed163;
-}
-
 //============Text============
-p{
-    color: $small-text;
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
-
 .greenText
 {
     color: green;
@@ -86,14 +24,10 @@ p{
     color: white;
 }
 
-//links
-a{
-    cursor: pointer;
-}
-
+//============SocialMedia===========
 .circle-social
 {
-    @include circle(41px, $social-background);
+    @include style-maxins.circle(41px, base.$social-background);
     color: white;
 
     svg{
@@ -103,53 +37,16 @@ a{
     }
 }
 
-//============Headers============
-h1, h2, h3{
-    color: $deafult-headers;
-    line-height: 6rem;
-}
-
-h1
-{
-    font-size: 5rem;
-}
-
-h2
-{
-    font-size: 3rem;
-    line-height: 3rem;
-}
-
-h3{
-    font-size: 2.3rem;
-    line-height: 2.5rem;
-}
-
-h4{
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-}
-
 //============Interactions============
 .inactive
 {
     opacity: 0.4;
 }
 
-//============forms============
-input[type="email"]
-{
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: $social-background;
-    color: white;
-}
-
 //==========Logo============
 .company-logo{
     display: flex;
-    align-items: baseline;
+    align-items: colorsline;
     gap: 5px;
 
     img{
@@ -167,10 +64,10 @@ input[type="email"]
 
 //============Navigation============
 .nav-container{
-    @include flex-center();
+    @include style-maxins.flex-center();
     gap:13vw;
     padding: 2vh 0;
-    background-color: $silver-background;
+    background-color: base.$silver-background;
 
     .nav-anchors > ul{
         list-style: none;
@@ -187,12 +84,12 @@ input[type="email"]
         display: flex;
 
         .login-button{
-            @include button-with-background($green, white);
+            @include style-maxins.button-with-background(base.$green, white);
             padding: 10px 20px;
         }
 
         .sign-up-button{
-            @include button-without-background($green);
+            @include style-maxins.button-without-background(base.$green);
             padding: 10px 20px;
         }
     }
@@ -203,7 +100,7 @@ input[type="email"]
 {
     display: grid;
     grid-template: 1fr 40px / 1.2fr 1fr;
-    background-color: $silver-background;
+    background-color: base.$silver-background;
     padding: 0;
 
     .hero-content
@@ -212,7 +109,7 @@ input[type="email"]
 
         .register-button
         {
-            @include button-with-background($green, white);
+            @include style-maxins.button-with-background(base.$green, white);
             padding: 15px 30px;
             margin-top: 25px;
         }
@@ -220,19 +117,19 @@ input[type="email"]
 
     .hero-graphic
     {
-        @include flex-center();
+        @include style-maxins.flex-center();
         padding-top: 5vh;
     }
 
     .hero-circles
     {
-        @include flex-center();
+        @include style-maxins.flex-center();
         grid-area: 2 / 1 / 2 / -1;
         gap: 10px;
 
         .circle-button
         {
-            @include circle(15px, $green)
+            @include style-maxins.circle(15px, base.$green)
         }
     }
 }
@@ -240,7 +137,7 @@ input[type="email"]
 //============Clients============
 .clients-container
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     flex-direction: column;
     margin-top: 80px;
 
@@ -260,7 +157,7 @@ input[type="email"]
 //============Community============
 .community-container
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     flex-direction: column;
     margin-top: 80px;
 
@@ -284,8 +181,8 @@ input[type="email"]
 
 .community-card
 {
-    @include flex-center();
-    @include cardlike-shadow(8px);
+    @include style-maxins.flex-center();
+    @include style-maxins.cardlike-shadow(8px);
     flex-direction: column;
     text-align: center;
     width: 18vw;
@@ -302,13 +199,13 @@ input[type="email"]
 //============Info============
 .info-container
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     flex-direction: column;
 }
 
 .info-card
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     margin-top: 50px;
     gap: 50px;
 
@@ -322,7 +219,7 @@ input[type="email"]
 
     .learn-more-button
     {
-        @include button-with-background($green, white);
+        @include style-maxins.button-with-background(base.$green, white);
         padding: 15px 35px;
         margin-top: 25px;
     }
@@ -330,9 +227,9 @@ input[type="email"]
 
 .info-statistics
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     width: 100%;
-    background-color: $silver-background;
+    background-color: base.$silver-background;
     gap: 20rem;
     padding: 100px 0;
 }
@@ -366,8 +263,8 @@ input[type="email"]
 //=====Customers Comments======
 .customer-comments-container
 {
-    @include flex-center();
-    background-color: $silver-background;
+    @include style-maxins.flex-center();
+    background-color: base.$silver-background;
     gap: 50px;
     margin-top: 50px;
     padding: 25px 0;
@@ -387,7 +284,7 @@ input[type="email"]
         }
 
         p{
-            color: $small-text-less-important;
+            color: base.$small-text-less-important;
         }
 
         .customer-comments-logos
@@ -402,8 +299,8 @@ input[type="email"]
 
 .meet-customers-button
 {
-    @include button-without-background($green);
-    @include flex-center();
+    @include style-maxins.button-without-background(base.$green);
+    @include style-maxins.flex-center();
     font-size: 1.2em;
     font-weight: bolder;
     padding: 10px;
@@ -417,13 +314,13 @@ input[type="email"]
 
     .posts-group
     {
-        @include flex-center();
+        @include style-maxins.flex-center();
         gap: 40px;
     }
 
     .posts-container-text
     {
-        @include flex-center();
+        @include style-maxins.flex-center();
         flex-direction: column;
 
         p{
@@ -436,13 +333,13 @@ input[type="email"]
 
 .post
 {
-    @include flex-center();
+    @include style-maxins.flex-center();
     flex-direction: column;
     background-color: white;
 
     .post-content
     {
-        @include cardlike-shadow(8px);
+        @include style-maxins.cardlike-shadow(8px);
         text-align: center;
         width: 19em;
         height: 200px;
@@ -462,8 +359,8 @@ input[type="email"]
 
 .readmore-button
 {
-    @include button-without-background($green);
-    @include flex-center();
+    @include style-maxins.button-without-background(base.$green);
+    @include style-maxins.flex-center();
     font-weight: bolder;
     gap: 10px;
     padding: 5px 35px;
@@ -478,13 +375,13 @@ input[type="email"]
 //============Demo============
 .demo-container
 {
-    @include flex-center();
-    background-color: $silver-background;
+    @include style-maxins.flex-center();
+    background-color: base.$silver-background;
     padding: 25px 0;
     flex-direction: column;
     
     p{
-        color: $footer-background;
+        color: base.$footer-background;
         font-size: 4em;
         font-weight: bolder;
         text-align: center;
@@ -492,8 +389,8 @@ input[type="email"]
 
     .demo-button
     {
-        @include button-with-background($green, white);
-        @include flex-center();
+        @include style-maxins.button-with-background(base.$green, white);
+        @include style-maxins.flex-center();
         gap: 10px;
         padding: 15px 35px;
         margin-top: 20px;
@@ -502,7 +399,7 @@ input[type="email"]
 
 //============footer============
 .footer-container{
-    background-color: $footer-background;
+    background-color: base.$footer-background;
     display: flex;
     gap: 50px;
     padding: 50px 0;
