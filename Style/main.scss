@@ -46,7 +46,7 @@
 //==========Logo============
 .company-logo{
     display: flex;
-    align-items: colorsline;
+    align-items: center;
     gap: 5px;
 
     img{
@@ -58,39 +58,83 @@
     p{
         font-size: 2.1em;
         font-weight: bolder;
-        float: left;
+        margin: 0;
+        color: base.$footer-background;
     }
 }
 
 //============Navigation============
+nav{
+    width: 100vw;
+}
+
 .nav-container{
     @include style-maxins.flex-center();
-    gap:13vw;
+    gap:20px;
     padding: 2vh 0;
+    height: 50px;
     background-color: base.$silver-background;
 
-    .nav-anchors > ul{
-        list-style: none;
+    .company-logo
+    {
+        flex:1;
+        margin-left: 5vw;
+    }
+
+    .nav-anchors{
+        flex: 2;
         display: flex;
+        height: inherit;
+        align-items: center;
         gap: 4em;
 
-        li{
-            padding: 10px;
-            font-weight: bolder;
+        a{
+            font-size: 1.2rem;
         }
     }
 
     .nav-buttons{
+        flex: 1;
         display: flex;
+        height: inherit;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 5vw;
+        gap: 10px;
 
         .login-button{
             @include style-maxins.button-with-background(base.$green, white);
-            padding: 10px 20px;
+            height: 40px;
+            width: 100px;
+            font-size: 0.9rem;
         }
 
         .sign-up-button{
             @include style-maxins.button-without-background(base.$green);
-            padding: 10px 20px;
+            height: 40px;
+            width: 100px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px)
+{
+    .nav-container
+    {
+        @include style-maxins.flex-center();
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    .nav-container{
+        .nav-anchors
+        {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 }

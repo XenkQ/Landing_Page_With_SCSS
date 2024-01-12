@@ -1,5 +1,12 @@
 * {
   font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
 button:hover {
@@ -9,7 +16,6 @@ button:hover {
 p {
   color: #717171;
   font-size: 1.2rem;
-  margin-top: 15px;
 }
 
 a {

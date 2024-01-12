@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 * {
   font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
 button:hover {
@@ -10,7 +17,6 @@ button:hover {
 p {
   color: #717171;
   font-size: 1.2rem;
-  margin-top: 15px;
 }
 
 a {
@@ -83,7 +89,7 @@ input[type=email] {
 
 .company-logo {
   display: flex;
-  align-items: colorsline;
+  align-items: center;
   gap: 5px;
 }
 .company-logo img {
@@ -94,44 +100,80 @@ input[type=email] {
 .company-logo p {
   font-size: 2.1em;
   font-weight: bolder;
-  float: left;
+  margin: 0;
+  color: #263238;
+}
+
+nav {
+  width: 100vw;
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 13vw;
+  gap: 20px;
   padding: 2vh 0;
+  height: 50px;
   background-color: #F5F7FA;
 }
-.nav-container .nav-anchors > ul {
-  list-style: none;
+.nav-container .company-logo {
+  flex: 1;
+  margin-left: 5vw;
+}
+.nav-container .nav-anchors {
+  flex: 2;
   display: flex;
+  height: inherit;
+  align-items: center;
   gap: 4em;
 }
-.nav-container .nav-anchors > ul li {
-  padding: 10px;
-  font-weight: bolder;
+.nav-container .nav-anchors a {
+  font-size: 1.2rem;
 }
 .nav-container .nav-buttons {
+  flex: 1;
   display: flex;
+  height: inherit;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5vw;
+  gap: 10px;
 }
 .nav-container .nav-buttons .login-button {
   background-color: #4CAF4F;
   color: white;
   border: 0;
   border-radius: 5px;
-  padding: 10px 20px;
+  height: 40px;
+  width: 100px;
+  font-size: 0.9rem;
 }
 .nav-container .nav-buttons .sign-up-button {
   background-color: transparent;
   color: #4CAF4F;
   border: 0;
   border-radius: 5px;
-  padding: 10px 20px;
+  height: 40px;
+  width: 100px;
+  font-size: 0.9rem;
 }
 
+@media only screen and (max-width: 1300px) {
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-container .nav-anchors {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .hero-container {
   display: grid;
   grid-template: 1fr 40px/1.2fr 1fr;
