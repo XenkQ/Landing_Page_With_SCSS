@@ -7,6 +7,10 @@ $silver-background: #F5F7FA;
 $footer-background: #263238;
 $social-background: #3B464C;
 
+//==========Margin============
+$text-under-header-top-margin: 20px;
+$phone-text-margin: 0 10px 0 10px;
+
 //==========All============
 *{
     font-family: Inter, sans-serif;
@@ -15,10 +19,10 @@ $social-background: #3B464C;
 }
 
 
-body
+html, body
 {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 //==========Buttons============
@@ -62,6 +66,24 @@ h3{
 h4{
     font-size: 1.5rem;
     line-height: 2.1rem;
+}
+
+@media only screen and (max-width: 768px)
+{
+    h1{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    h2{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    h3{
+        font-size: 1.9rem;
+        line-height: 2rem;
+    }
 }
 
 //==========Forms============
