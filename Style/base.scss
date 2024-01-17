@@ -1,11 +1,17 @@
-//=========ExternalSCSS==========
-$deafult-headers: #4D4D4D;
-$small-text: #717171;
-$small-text-less-important: #89939E;
+//=========Colors==========
+
+//headers
+$default-header-color: #4D4D4D;
+
+//text
+$small-text-color: #717171;
+$small-text-less-important-color: #89939E;
+
+//website colors
 $green: #4CAF4F;
-$silver-background: #F5F7FA;
-$footer-background: #263238;
-$social-background: #3B464C;
+$silver: #F5F7FA;
+$dark1: #263238;
+$dark2: #3B464C;
 
 //==========Margin============
 $text-under-header-top-margin: 20px;
@@ -32,7 +38,7 @@ button:hover{
 
 //============Text============
 p{
-    color: $small-text;
+    color: $small-text-color;
     font-size: 1.2rem;
 }
 
@@ -43,7 +49,7 @@ a{
 
 //============Headers============
 h1, h2, h3{
-    color: $deafult-headers;
+    color: $default-header-color;
     line-height: 6rem;
 }
 
@@ -86,12 +92,7 @@ h4{
     }
 }
 
-//==========Forms============
-input[type="email"]
-{
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: $social-background;
-    color: white;
+//Actions
+textarea:focus, input:focus{
+    outline: none;
 }

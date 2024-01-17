@@ -60,10 +60,6 @@ h4 {
     line-height: 2rem;
   }
 }
-input[type=email] {
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #3B464C;
-  color: white;
+textarea:focus, input:focus {
+  outline: none;
 }/*# sourceMappingURL=base.css.map */
