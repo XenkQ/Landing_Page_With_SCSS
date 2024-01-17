@@ -706,6 +706,7 @@ textarea:focus, input:focus {
   color: white;
 }
 .footer-container .footer-mail-form {
+  margin-right: 8vw;
   flex: 1;
 }
 .footer-container .footer-mail-form h4 {
