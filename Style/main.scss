@@ -64,7 +64,6 @@
 }
 
 //============Navigation============
-
 .mobile-nav-more
 {
     background-color: white;
@@ -85,24 +84,32 @@
 
     .company-logo
     {
-        flex:1;
-        margin-left: 5vw;
-
-        p{
-            margin-right: 25px;
-        }
+        flex:0.7;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .nav-anchors{
-        @include style-maxins.flex-center();
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
         flex: 2;
         height: inherit;
-        gap: 20px;
+        gap: 10px;
 
         a{
             @include style-maxins.flex-center();
-            flex: 1;
             font-size: 1.2rem;
+        }
+
+        :first-child
+        {
+            justify-content: flex-end;
+        }
+
+        :last-child
+        {
+            justify-content: flex-start;
         }
     }
 
@@ -110,28 +117,29 @@
         flex: 1;
         display: flex;
         height: inherit;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
-        margin-right: 5vw;
         gap:20px;
 
         .login-button{
+            flex: 1;
             @include style-maxins.button-with-background(base.$green, white);
             height: 40px;
-            width: 120px;
+            max-width: 180px;
             font-size: 1.1rem;
         }
 
         .sign-up-button{
+            flex: 0.5;
             @include style-maxins.button-without-background(base.$green);
             height: 40px;
-            width: 120px;
+            max-width: 80px;
             font-size: 1.1rem;
         }
     }
 }
 
-@media only screen and (max-width: 1300px)
+@media only screen and (max-width: 1000px)
 {
     .mobile-nav-more
     {
@@ -178,6 +186,7 @@
             justify-content: left;
             align-items: flex-start;
             width: 100%;
+            padding-left: 13px;
             flex: 1;
         }
     }
@@ -199,8 +208,32 @@
     }
 }
 
-//============Hero============
+@media only screen and (max-width: 700px)
+{
+    .nav-container
+    {
+        height: 100vh;
+        width: 100vw;
+    }
 
+    @keyframes slideIn
+    {
+        0%
+        {
+            transform: translate(-100vw);
+        }
+    }
+
+    @keyframes slideOut
+    {
+        100%
+        {
+            transform: translate(-100vw);
+        }
+    }
+}
+
+//============Hero============
 .hero-container
 {
     display: grid;
@@ -292,7 +325,6 @@
 }
 
 //============Clients============
-
 .clients-container
 {
     @include style-maxins.flex-center();

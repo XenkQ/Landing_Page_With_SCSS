@@ -134,56 +134,60 @@ textarea:focus, input:focus {
   background-color: #F5F7FA;
 }
 .nav-container .company-logo {
-  flex: 1;
-  margin-left: 5vw;
-}
-.nav-container .company-logo p {
-  margin-right: 25px;
+  flex: 0.7;
+  display: flex;
+  justify-content: flex-end;
 }
 .nav-container .nav-anchors {
   display: flex;
   justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
   flex: 2;
   height: inherit;
-  gap: 20px;
+  gap: 10px;
 }
 .nav-container .nav-anchors a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
   font-size: 1.2rem;
+}
+.nav-container .nav-anchors :first-child {
+  justify-content: flex-end;
+}
+.nav-container .nav-anchors :last-child {
+  justify-content: flex-start;
 }
 .nav-container .nav-buttons {
   flex: 1;
   display: flex;
   height: inherit;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  margin-right: 5vw;
   gap: 20px;
 }
 .nav-container .nav-buttons .login-button {
+  flex: 1;
   background-color: #4CAF4F;
   color: white;
   border: 0;
   border-radius: 5px;
   height: 40px;
-  width: 120px;
+  max-width: 180px;
   font-size: 1.1rem;
 }
 .nav-container .nav-buttons .sign-up-button {
+  flex: 0.5;
   background-color: transparent;
   color: #4CAF4F;
   border: 0;
   border-radius: 5px;
   height: 40px;
-  width: 120px;
+  max-width: 80px;
   font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1000px) {
   .mobile-nav-more {
     display: block;
     position: fixed;
@@ -222,6 +226,7 @@ textarea:focus, input:focus {
     justify-content: left;
     align-items: flex-start;
     width: 100%;
+    padding-left: 13px;
     flex: 1;
   }
   @keyframes slideIn {
@@ -232,6 +237,22 @@ textarea:focus, input:focus {
   @keyframes slideOut {
     100% {
       transform: translate(-400px);
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .nav-container {
+    height: 100vh;
+    width: 100vw;
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translate(-100vw);
+    }
+  }
+  @keyframes slideOut {
+    100% {
+      transform: translate(-100vw);
     }
   }
 }
